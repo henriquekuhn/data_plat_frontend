@@ -8,7 +8,7 @@ Desenvolver um sistema de banco de dados escalável e seguro para armazenar dado
 ## 📅 Sprints e Entregáveis
 
 ### Índice
-1. [Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados](#sprint-1-configuração-do-ambiente-e-estrutura-inicial-do-banco-de-dados)   
+1. [Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados](#sprint-1-configuração-do-ambiente-e-estrutura-inicial-do-banco-de-dados)  
    1.1. [Passos para Configuração do Ambiente com Docker](#passos-para-configuração-do-ambiente-com-docker)  
    1.2. [Configuração do PostgreSQL com Tabelas Básicas](#configuração-do-postgresql-com-tabelas-básicas)
 3. [Sprint 2: Conexão Backend e Estrutura Básica de API (Em Andamento)](#sprint-2)
@@ -164,7 +164,7 @@ Essa estrutura para a Sprint 1 permitirá uma base sólida para o desenvolviment
 
 ---
 
-## 1.1 Passos para Configuração do Ambiente com Docker
+## 1.1. ## Passos para Configuração do Ambiente com Docker
 
 ### Instalação do Docker
 1. **Baixe e Instale o Docker:**
@@ -207,7 +207,7 @@ volumes:
   pgdata:
 ```
 
-## 1.2 Configuração do PostgreSQL com Tabelas Básicas
+## 1.2. Configuração do PostgreSQL com Tabelas Básicas
    
 ### Iniciar o Contêiner
 
