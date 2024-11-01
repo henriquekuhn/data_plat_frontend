@@ -9,14 +9,14 @@ Desenvolver um sistema de banco de dados escalável e seguro para armazenar dado
 
 ### Índice
 1. [Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados](#sprint-1-configuração-do-ambiente-e-estrutura-inicial-do-banco-de-dados)
-1.1 [Passos para Configuração do Ambiente com Docker](#passos-para-configuração-do-ambiente-com-docker)
-1.2 [Configuração do PostgreSQL com Tabelas Básicas](#configuração-do-postgresql-com-tabelas-básicas)
-3. [Sprint 2: Conexão Backend e Estrutura Básica de API (Em Andamento)](#sprint-2)
-4. [Sprint 3: Interface Inicial do Usuário (Frontend Angular)](#sprint-3)
-5. [Sprint 4: Implementação de Filtragem e Ordenação de Dados](#sprint-4s)
-6. [Sprint 5: Segurança e Controle de Acesso](#sprint-5)
-7. [Sprint 6: Automação de Análise de Dados e Relatórios](#sprint-6)
-8. [Sprint 7: Testes Finais e Otimização do Sistema](#sprint-7)
+1.1. [Passos para Configuração do Ambiente com Docker](#passos-para-configuração-do-ambiente-com-docker)
+1.2. [Configuração do PostgreSQL com Tabelas Básicas](#configuração-do-postgresql-com-tabelas-básicas)
+2. [Sprint 2: Conexão Backend e Estrutura Básica de API (Em Andamento)](#sprint-2)
+3. [Sprint 3: Interface Inicial do Usuário (Frontend Angular)](#sprint-3)
+4. [Sprint 4: Implementação de Filtragem e Ordenação de Dados](#sprint-4s)
+5. [Sprint 5: Segurança e Controle de Acesso](#sprint-5)
+6. [Sprint 6: Automação de Análise de Dados e Relatórios](#sprint-6)
+7. [Sprint 7: Testes Finais e Otimização do Sistema](#sprint-7)
 
 ---
 
