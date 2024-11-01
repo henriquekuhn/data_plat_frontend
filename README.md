@@ -8,13 +8,13 @@ Desenvolver um sistema de banco de dados escalável e seguro para armazenar dado
 ## 📅 Sprints e Entregáveis
 
 ### Índice
-1. [Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados](#sprint-1-configuração-do-ambiente-e-estrutura-inicial-do-banco-de-dados)
-2. [Sprint 2: Conexão Backend e Estrutura Básica de API (Em Andamento)](#sprint-2-conexão-backend-e-estrutura-básica-de-api-em-andamento)
-3. [Sprint 3: Interface Inicial do Usuário (Frontend Angular)](#sprint-3-interface-inicial-do-usuário-frontend-angular)
-4. [Sprint 4: Implementação de Filtragem e Ordenação de Dados](#sprint-4-implementação-de-filtragem-e-ordenação-de-dados)
-5. [Sprint 5: Segurança e Controle de Acesso](#sprint-5-segurança-e-controle-de-acesso)
-6. [Sprint 6: Automação de Análise de Dados e Relatórios](#sprint-6-automação-de-análise-de-dados-e-relatórios)
-7. [Sprint 7: Testes Finais e Otimização do Sistema](#sprint-7-testes-finais-e-otimização-do-sistema)
+1. [Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados](#sprint-1)
+2. [Sprint 2: Conexão Backend e Estrutura Básica de API (Em Andamento)](#sprint-2)
+3. [Sprint 3: Interface Inicial do Usuário (Frontend Angular)](#sprint-3)
+4. [Sprint 4: Implementação de Filtragem e Ordenação de Dados](#sprint-4s)
+5. [Sprint 5: Segurança e Controle de Acesso](#sprint-5)
+6. [Sprint 6: Automação de Análise de Dados e Relatórios](#sprint-6)
+7. [Sprint 7: Testes Finais e Otimização do Sistema](#sprint-7)
 
 ---
 
@@ -124,7 +124,7 @@ Status: **Em Andamento**
 - [ ] Sprint 7: Testes Finais e Otimização do Sistema
 
 
-  # Sprint 1: Projeto de Configuração de Ambiente com Docker e PostgreSQL
+# Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados
 
 ## User Stories
 1. **Como desenvolvedor**, quero configurar um ambiente de desenvolvimento padronizado com Docker, para garantir consistência entre as etapas de desenvolvimento e produção.
