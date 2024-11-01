@@ -351,4 +351,59 @@ DROP TABLE IF EXISTS nome_da_tabela;	Exclui uma tabela apenas se ela existir
 \q	Sai do prompt do PostgreSQL
 Este guia deve ajudá-lo a gerenciar as tabelas em um banco de dados PostgreSQL em contêineres Docker de maneira segura e eficiente.
 
+## Gerando banco de dados através de arquivo SQL:
+
+1. Crie um arquivo chamado `sprint1_test_table.sql` em seu diretório de projeto com o seguinte conteúdo:
+
+```
+CREATE TABLE dut_completo (
+    id SERIAL PRIMARY KEY,
+    lot VARCHAR(50),
+    version VARCHAR(50),
+    date DATE
+);
+
+CREATE TABLE teste (
+    id SERIAL PRIMARY KEY,
+    dut_id INT NOT NULL,
+    test_name VARCHAR(255) NOT NULL,  -- Ex.: "Continuidade", "Leakage"
+    pin INT,
+    temperature DECIMAL(5,2),
+    voltage DECIMAL(5,2),
+    result VARCHAR(255),  
+    test_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (dut_id) REFERENCES dut_completo(id) ON DELETE CASCADE
+);
+```
+
+2. Executar o Arquivo SQL no PostgreSQL:
+
+Para executar o arquivo SQL e criar os bancos de dados e as tabelas, siga os passos abaixo:
+
+Passo 1: Acesse o Contêiner PostgreSQL
+No terminal, acesse o contêiner do PostgreSQL:
+
+```
+docker exec -it data-plat-db-1 psql -U your_user
+```
+
+Passo 2: Execute o Arquivo SQL
+Com o prompt do PostgreSQL aberto, execute o arquivo SQL com o seguinte comando:
+
+```
+\i /path/to/your/sprint1_test_table.sql
+```
+
+Substitua /path/to/your/setup.sql pelo caminho real onde você salvou o arquivo sprint1_test_table.sql dentro do contêiner. Você pode precisar copiar o arquivo para o contêiner ou montá-lo como um volume no Docker.
+
+3. Verificar a Criação das Tabelas:
+
+Após executar o arquivo SQL, você pode verificar se as tabelas foram criadas corretamente usando o comando:
+
+```
+\dt
+```
+
+Isso exibirá uma lista de todas as tabelas no banco de dados data_plat.
+
 
