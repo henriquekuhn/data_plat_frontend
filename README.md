@@ -123,6 +123,7 @@ Status: **Em Andamento**
 - [ ] Sprint 6: Automação de Análise de Dados e Relatórios
 - [ ] Sprint 7: Testes Finais e Otimização do Sistema
 
+---
 
 # Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados
 
