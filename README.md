@@ -124,7 +124,7 @@ Status: **Em Andamento**
 - [ ] Sprint 7: Testes Finais e Otimização do Sistema
 
 
-# Sprint 1: Projeto de Configuração de Ambiente com Docker e PostgreSQL
+  # Sprint 1: Projeto de Configuração de Ambiente com Docker e PostgreSQL
 
 ## User Stories
 1. **Como desenvolvedor**, quero configurar um ambiente de desenvolvimento padronizado com Docker, para garantir consistência entre as etapas de desenvolvimento e produção.
