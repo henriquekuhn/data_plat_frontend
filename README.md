@@ -9,12 +9,14 @@ Desenvolver um sistema de banco de dados escalável e seguro para armazenar dado
 
 ### Índice
 1. [Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados](#sprint-1-configuração-do-ambiente-e-estrutura-inicial-do-banco-de-dados)
-2. [Sprint 2: Conexão Backend e Estrutura Básica de API (Em Andamento)](#sprint-2)
-3. [Sprint 3: Interface Inicial do Usuário (Frontend Angular)](#sprint-3)
-4. [Sprint 4: Implementação de Filtragem e Ordenação de Dados](#sprint-4s)
-5. [Sprint 5: Segurança e Controle de Acesso](#sprint-5)
-6. [Sprint 6: Automação de Análise de Dados e Relatórios](#sprint-6)
-7. [Sprint 7: Testes Finais e Otimização do Sistema](#sprint-7)
+   1.1 [Passos para Configuração do Ambiente com Docker](passos-para-configuração-do-ambiente-com-docker)
+   1.2 [Configuração do PostgreSQL com Tabelas Básicas](configuração-do-postgresql-com-tabelas-básicas)
+3. [Sprint 2: Conexão Backend e Estrutura Básica de API (Em Andamento)](#sprint-2)
+4. [Sprint 3: Interface Inicial do Usuário (Frontend Angular)](#sprint-3)
+5. [Sprint 4: Implementação de Filtragem e Ordenação de Dados](#sprint-4s)
+6. [Sprint 5: Segurança e Controle de Acesso](#sprint-5)
+7. [Sprint 6: Automação de Análise de Dados e Relatórios](#sprint-6)
+8. [Sprint 7: Testes Finais e Otimização do Sistema](#sprint-7)
 
 ---
 
@@ -125,7 +127,7 @@ Status: **Em Andamento**
 
 ---
 
-# Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados
+# 1. Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados
 
 ## User Stories
 1. **Como desenvolvedor**, quero configurar um ambiente de desenvolvimento padronizado com Docker, para garantir consistência entre as etapas de desenvolvimento e produção.
@@ -135,17 +137,17 @@ Status: **Em Andamento**
 
 ## Tarefas e Atividades
 
-### 1. Configuração do Ambiente com Docker
+### 1.1 Configuração do Ambiente com Docker
 - **Atividade:** Instalar Docker no ambiente local (se necessário) e criar contêineres para PostgreSQL e demais serviços essenciais.
 - **Critérios de Aceitação:** Docker instalado, contêineres criados com Docker Compose, rodando de forma consistente no ambiente de desenvolvimento.
 - **Status de Pronto:** Ambiente local executando PostgreSQL em um contêiner Docker.
 
-### 2. Configuração do PostgreSQL com Tabelas Básicas
+### 1.2 Configuração do PostgreSQL com Tabelas Básicas
 - **Atividade:** Estruturar e implementar tabelas iniciais para o armazenamento de dados de teste, incluindo valores, resultados e limites, usando SQL.
 - **Critérios de Aceitação:** Tabelas básicas criadas com os tipos de dados definidos; relacionamentos principais implementados e funcionando.
 - **Status de Pronto:** Banco de dados PostgreSQL populado com a estrutura inicial de tabelas e com dados de teste.
 
-### 3. Documentação do Ambiente e Configuração do Banco
+### 1.3 Documentação do Ambiente e Configuração do Banco
 - **Atividade:** Documentar os passos para instalação, configuração do Docker e criação das tabelas iniciais no banco de dados.
 - **Critérios de Aceitação:** Documentação clara e detalhada, com instruções para reprodução do ambiente e detalhes das tabelas.
 - **Status de Pronto:** Documentação completa e acessível a todos os desenvolvedores para assegurar a reprodutibilidade.
@@ -162,9 +164,9 @@ Essa estrutura para a Sprint 1 permitirá uma base sólida para o desenvolviment
 
 ---
 
-## Passos para Configuração do Ambiente com Docker
+## 1.1 Passos para Configuração do Ambiente com Docker
 
-### 1. Instalação do Docker
+### Instalação do Docker
 1. **Baixe e Instale o Docker:**
    - Acesse Docker Desktop e baixe a versão para seu sistema operacional.
    - Siga as instruções de instalação para configurar o Docker em sua máquina.
@@ -177,7 +179,7 @@ Essa estrutura para a Sprint 1 permitirá uma base sólida para o desenvolviment
      ```
    - Isso deve exibir a versão do Docker instalada.
 
-### 2. Criação do Arquivo `docker-compose.yml`
+### Criação do Arquivo `docker-compose.yml`
 1. **Crie um diretório para o projeto:**
    ```bash
    mkdir data-plat
@@ -205,7 +207,9 @@ volumes:
   pgdata:
 ```
 
-### 3. Iniciar o Contêiner
+## 1.2 Configuração do PostgreSQL com Tabelas Básicas
+   
+### Iniciar o Contêiner
 
 1. **Inicie o contêiner com Docker Compose:**
 
@@ -222,14 +226,14 @@ docker ps
 ```
 -	Você deve ver o contêiner listado como data-plat-db-1.
 
-### 4. Acessar o Banco de Dados
+### Acessar o Banco de Dados
 
 1.	**Acesse o contêiner PostgreSQL:**
 o	Execute o seguinte comando para abrir o cliente psql:
 ```
 docker exec -it data-plat-db-1 psql -U cafrunikuhn -d data_plat
 ```
-### 5. Verificar Persistência dos Dados
+### Verificar Persistência dos Dados
 
 1.	**Crie uma tabela e insira dados:**
 ```
@@ -261,7 +265,7 @@ docker exec -it data-plat-db-1 psql -U cafrunikuhn -d data_plat
 ```
 SELECT * FROM test_table;
 ```
-### 6. Debug do Contêiner (Opcional)
+### Debug do Contêiner (Opcional)
 Se você precisar depurar o contêiner, use o seguinte comando:
 ```
 docker debug data-plat-db-1
@@ -275,6 +279,7 @@ Este documento fornece instruções detalhadas para:
 1.	Listar tabelas no PostgreSQL dentro de um contêiner Docker.
 2.	Excluir tabelas específicas.
 3.	Comandos SQL para manipulação de tabelas.
+4.	
 Pré-requisitos
 •	Ter o Docker e o PostgreSQL configurados e em execução.
 •	Acesso ao contêiner Docker com o PostgreSQL.
