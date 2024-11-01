@@ -313,12 +313,16 @@ Para finalizar, digite o comando para sair do prompt:
 ```
 ________________________________________
 Resumo dos Comandos Utilizados
-Comando	Função
-docker exec -it <container> psql -U <user> -d <db>	Acessa o banco de dados PostgreSQL no contêiner Docker
-\dt	Lista todas as tabelas do banco de dados
-DROP TABLE nome_da_tabela;	Exclui uma tabela específica
-DROP TABLE IF EXISTS nome_da_tabela;	Exclui uma tabela apenas se ela existir
-\q	Sai do prompt do PostgreSQL
+
+| Comando                                    | Função                                         |
+|--------------------------------------------|------------------------------------------------|
+| `docker exec -it <container> psql -U <user> -d <db>` | Acessa o banco de dados PostgreSQL no contêiner Docker |
+| `\dt`                                      | Lista todas as tabelas do banco de dados       |
+| `DROP TABLE nome_da_tabela;`               | Exclui uma tabela específica                   |
+| `DROP TABLE IF EXISTS nome_da_tabela;`     | Exclui uma tabela apenas se ela existir        |
+| `\q`                                       | Sai do prompt do PostgreSQL                    |
+
+
 Este guia deve ajudá-lo a gerenciar as tabelas em um banco de dados PostgreSQL em contêineres Docker de maneira segura e eficiente.
 
 Resumo dos Comandos Utilizados
