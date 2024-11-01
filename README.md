@@ -125,7 +125,7 @@ Status: **Em Andamento**
 
 ---
 
-## Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados
+# Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados
 
 ## User Stories
 1. **Como desenvolvedor**, quero configurar um ambiente de desenvolvimento padronizado com Docker, para garantir consistência entre as etapas de desenvolvimento e produção.
