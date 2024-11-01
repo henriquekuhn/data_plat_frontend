@@ -8,7 +8,7 @@ Desenvolver um sistema de banco de dados escalável e seguro para armazenar dado
 ## 📅 Sprints e Entregáveis
 
 ### Índice
-1. [Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados](#sprint-1)
+1. [Sprint 1: Configuração do Ambiente e Estrutura Inicial do Banco de Dados](#sprint-1-configuração-do-ambiente-e-estrutura-inicial-do-banco-de-dados)
 2. [Sprint 2: Conexão Backend e Estrutura Básica de API (Em Andamento)](#sprint-2)
 3. [Sprint 3: Interface Inicial do Usuário (Frontend Angular)](#sprint-3)
 4. [Sprint 4: Implementação de Filtragem e Ordenação de Dados](#sprint-4s)
