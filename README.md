@@ -164,7 +164,7 @@ Essa estrutura para a Sprint 1 permitirá uma base sólida para o desenvolviment
 
 ---
 
-## 1.1. ## Passos para Configuração do Ambiente com Docker
+## 1.1. Passos para Configuração do Ambiente com Docker
 
 ### Instalação do Docker
 1. **Baixe e Instale o Docker:**
