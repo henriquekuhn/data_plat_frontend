@@ -1,0 +1,7 @@
+a = {
+    "DUT": "10",
+    "P": "30"
+}
+
+value = 10
+print(value, *a.values())
