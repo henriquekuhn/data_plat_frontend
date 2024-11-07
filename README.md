@@ -416,3 +416,114 @@ Após executar o arquivo SQL, você pode verificar se as tabelas foram criadas c
 Isso exibirá uma lista de todas as tabelas no banco de dados data_plat.
 
 
+# 2. Sprint 2: Desenvolvimento da API CRUD em Python com PostgreSQL
+
+## User Stories
+
+1. **Como desenvolvedor**, quero criar uma API básica em Python que conecte ao PostgreSQL para realizar operações CRUD.
+
+2. **Como usuário**, quero que a API permita acessar e modificar registros no banco de dados de forma segura e estruturada.
+
+## Tarefas e Atividades
+
+### 2.1 Implementação dos Endpoints CRUD para Operações Básicas
+
+- Atividade: Desenvolver uma API que suporte as operações CRUD (Create, Read, Update, Delete) para permitir a interação com o banco de dados.
+
+- Critérios de Aceitação: Endpoints funcionando para criar, ler, atualizar e deletar registros, com parâmetros flexíveis para operar em qualquer tabela.
+
+- Status de Pronto: API conectada ao PostgreSQL com endpoints CRUD operacionais.
+
+### 2.2 Implementação de Testes Unitários para os Endpoints
+
+- Atividade: Criar testes unitários para cada operação CRUD da API, garantindo seu funcionamento correto e identificando possíveis erros.
+
+- Critérios de Aceitação: Testes para todos os endpoints desenvolvidos, cobrindo as operações de criação, leitura, atualização e exclusão.
+
+- Status de Pronto: Testes executados com sucesso diretamente no VSCode, validando a funcionalidade dos endpoints.
+
+### 2.3 Documentação da API e dos Endpoints CRUD
+
+- Atividade: Documentar o funcionamento da API, explicando o código, descrevendo cada função, e fornecendo instruções de uso.
+
+- Critérios de Aceitação: Documentação clara e acessível, com tabela de funções, explicação das operações CRUD, e sugestões de melhorias futuras.
+
+- Status de Pronto: Documentação completa com exemplos de uso e orientações de como aprimorar o projeto.
+
+## Definição de Pronto
+Para a Sprint 2 ser considerada completa:
+
+- A API deve estar funcional com endpoints CRUD conectados ao banco de dados PostgreSQL.
+
+- Todos os testes unitários básicos para CRUD devem estar implementados e executados com sucesso.
+
+- A documentação da API, endpoints e orientações de melhorias deve estar finalizada e disponível para a equipe.
+
+
+## 2.1. Implementação dos Endpoints CRUD
+
+### Estrutura do Código:
+
+main.py: Contém a classe DatabaseConnection, que implementa os métodos de conexão e operações CRUD.
+
+crud_test.py: Arquivo de testes unitários para cada função da API, com validação de funcionamento.
+
+#### Funções CRUD:
+
+| Função         | Descrição                                                                                   | Parâmetros                                                                                 | Retorno                           |
+|----------------|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------|
+| `connect`      | Estabelece conexão com o banco de dados.                                                    | Nenhum                                                                                     | `True` se conectado, caso contrário `False` |
+| `create_table` | Cria uma tabela com um `id` (chave primária) e `created_at` (timestamp).                    | `table_name` (string)                                                                      | `True` se sucesso, caso contrário `False` |
+| `add_columns`  | Adiciona colunas a uma tabela existente.                                                    | `table_name` (string), `columns` (dicionário de colunas e tipos, ex: `{"coluna": "tipo"}`) | `True` se sucesso, caso contrário `False` |
+| `add_data`     | Insere dados em colunas da tabela.                                                          | `table_name` (string), `column_data` (lista de dicionários)                                | `True` se sucesso, caso contrário `False` |
+| `delete_data`  | Exclui dados de uma tabela com base em uma condição.                                        | `table_name` (string), `reference`, `data`                                                 | `True` se sucesso, caso contrário `False` |
+| `update_data`  | Atualiza dados de uma coluna com base em condições.                                         | `table_name`, `update_column`, `new_value`, `reference_column_and_value`                   | `True` se sucesso, caso contrário `False` |
+
+
+## 2.2. Testes Unitários
+
+Para executar os testes, utilize o arquivo crud_test.py. O arquivo inclui testes para:
+
+- Conexão com o Banco de Dados: Valida a conexão com o PostgreSQL.
+
+- CRUD Completo: Verifica se cada operação CRUD está funcional e com retorno esperado.
+
+- Persistência de Dados: Testa a persistência ao inserir, atualizar e deletar registros em tabelas específicas.
+
+| Função             | Descrição                                                                                  | Parâmetros                                   | Retorno Esperado                                          |
+|--------------------|--------------------------------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------------------|
+| test_connect       | Testa a função de conexão com o banco de dados.                                             | Nenhum                                       | `True` se a conexão for bem-sucedida, `False` caso contrário|
+| test_create_table  | Testa a criação de uma tabela no banco de dados.                                            | `table_name` (nome da tabela)                | `True` se a tabela for criada com sucesso, `False` caso contrário|
+| test_add_columns   | Testa a adição de novas colunas a uma tabela existente.                                     | `table_name` (nome da tabela), `columns` (dicionário de colunas e tipos) | `True` se as colunas forem adicionadas com sucesso, `False` caso contrário|
+| test_add_data      | Testa a inserção de dados em uma tabela.                                                   | `table_name` (nome da tabela), `column_data` (lista de dicionários) | `True` se os dados forem inseridos com sucesso, `False` caso contrário|
+| test_delete_data   | Testa a exclusão de dados de uma tabela com base em uma condição.                          | `table_name` (nome da tabela), `reference` (coluna de referência), `data` (dados) | `Número de registros excluídos` |
+| test_update_data   | Testa a atualização de dados de uma tabela com base em uma condição.                       | `table_name` (nome da tabela), `update_column` (coluna a ser atualizada), `new_value` (novo valor), `reference_column_and_value` (condição de atualização) | `True` se a atualização for bem-sucedida, `False` caso contrário|
+
+#### Como Rodar os Testes:
+
+1. Inicie o servidor PostgreSQL e configure o banco de dados de acordo com os parâmetros definidos.
+
+2. Execute os testes com o comando:
+
+```
+pytest back/unittest/crud_test.py
+```
+
+## 2.3. Sugestões de Melhorias
+
+- Adicionar a implementação em Docker
+
+- Aplicar conceito SMART
+
+- Autenticação e Segurança: Implementar autenticação para proteger os endpoints e limitar o acesso.
+
+- Validação de Dados: Adicionar verificações de tipos e formato de dados para cada entrada no banco de dados.
+
+- Tratamento de Erros: Aprimorar o tratamento de erros com mensagens de retorno mais específicas.
+
+- Documentação Automática: Utilizar ferramentas como Swagger para gerar documentação interativa dos endpoints.
+
+
+## Conclusão
+
+Esta Sprint forneceu a base de uma API CRUD em Python para PostgreSQL, permitindo interações fundamentais com o banco de dados. As melhorias sugeridas orientam o avanço para uma API mais segura e robusta.
