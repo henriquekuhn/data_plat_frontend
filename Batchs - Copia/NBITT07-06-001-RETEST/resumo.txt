@@ -1,0 +1,9 @@
+Fails: 11
+Calibração (APC) - 10
+Calibração (AGC) - 0
+Corrente Standby Alta - 0
+Corrente Standby Baixa - 1
+GPIO - 0
+OBW - 0
+
+

@@ -1,0 +1,7 @@
+{
+  "name": "data_platUI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

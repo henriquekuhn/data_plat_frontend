@@ -53,7 +53,7 @@ class DatabaseConnection:
         try:
             create_table_query = f"""
                 CREATE TABLE IF NOT EXISTS {table_name} (
-                    id SERIAL PRIMARY KEY,
+                    ID SERIAL PRIMARY KEY,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 );
             """
