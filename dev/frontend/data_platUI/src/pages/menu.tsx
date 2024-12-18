@@ -52,11 +52,11 @@ const Menu: React.FC = () => {
   const location = useLocation();
 
   return (
-    <IonMenu contentId="main" type="overlay">
+    <IonMenu contentId="main" type="overlay" className='custom-menu'>
       <IonContent>
         <IonList id="inbox-list">
-        <IonListHeader className="custom-header">
-          <div className="header-content">
+        <IonListHeader className="header">
+          <div className='header-content'>
             <div className="ht-micron">HT MICRON</div>
             <div className="semiconductors">SEMICONDUCTORS</div>
           </div>

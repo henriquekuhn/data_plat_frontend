@@ -1,3 +1,6 @@
+@import 'tabulator-tables/dist/css/tabulator.min.css';
+
+
 #container {
   text-align: center;
   position: absolute;
@@ -21,4 +24,108 @@
 
 #container a {
   text-decoration: none;
+}
+
+.custom-button {
+  margin-bottom: 18px; /* Margem inferior */
+  font-family: sans-serif; /* Fonte */
+  font-weight: bold; /* Peso da fonte */
+  font-size: 14px; /* Tamanho da fonte */
+  border-radius: 5px;
+  --ion-color-base: #0071c4; /* Cor de fundo principal */
+  --ion-color-base-hover: #005a9e; /* Cor ao passar o mouse */ 
+}
+
+.horizontal-container {
+  display: flex;              /* Configura como flex container */
+  margin-top: 20px;           /* Margem superior opcional */
+}
+
+.vertical-center-row {
+  display: flex;
+  align-items: center; /* Alinha os itens no eixo vertical (centro) */
+}
+
+.centered-select {
+  flex: 1;                    /* Faz o select ocupar mais espaço, se necessário */
+  max-width: 150px;           /* Limita o tamanho máximo */
+  margin-left: 20px;
+}
+
+.connect-button {
+  --ion-color-base: #0071c4; /* Cor de fundo principal */
+  --ion-color-base-hover: #005a9e; /* Cor ao passar o mouse */
+  font-family: sans-serif !important;
+  font-weight: bold;
+  font-size: 14px;
+  --border-radius: 2px !important;
+  padding: 10px 20px;
+  margin-left: 0px;
+}
+
+.button-container {
+  margin-left: 5px;
+  align-items: left; /* Centraliza horizontalmente */
+}
+
+.cell {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Geral */
+.independent-column-wrapper {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Coluna independente */
+.independent-column {
+  position: fixed;
+  top: 100px;
+  right: 120px; /* Coloca no canto superior direito */
+  width: 300px; /* Defina a largura desejada */
+  background-color: #1e1e1e;
+  opacity: 0.96; 
+  padding-left: 10px;
+  padding-top: 10px;
+  border: 1px solid #363636;
+  border-radius: 8px;
+  overflow-y: auto; /* Adiciona scroll caso o conteúdo exceda */
+  max-height: 200px; /* Define um limite de altura */
+  z-index: 10; /* Garantir que ela fique acima do restante */
+}
+
+.independent-column p {
+  margin: 0px 0;
+  font-size: 14px;
+  line-height: 1;
+  color: #e7e7e7;
+  font-weight: 500;
+}
+
+.centered-container {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  margin-left: 15px !important;
+}
+
+.independent-column p {
+  display: flex;
+  justify-content: space-between; /* Garante que o conteúdo seja distribuído entre as extremidades */
+  margin: 5px 0;
+}
+
+.left {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.right {
+  text-align: right;
+  margin-right: 30px;
 }
